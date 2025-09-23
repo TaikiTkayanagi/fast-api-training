@@ -1,7 +1,8 @@
 {
     "python.analysis.autoImportCompletions": true,
     "python.analysis.extraPaths": [
-        "./src"
+        "./src",
+        "./src/Controller"
     ],
     "python.analysis.typeCheckingMode": "standard"
 }
