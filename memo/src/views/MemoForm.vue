@@ -23,6 +23,9 @@ const click = async (e: Event) => {
             <label for="content">Content:</label>
             <textarea id="content" name="content" v-model="memoFormStore.content"></textarea>
 
+            <label for="deadLine">締め切り日:</label>
+            <input type="date" name="deadLine" v-model="memoFormStore.status.deadLine"/>
+
             <button type="submit" v-on:click="click">Submit</button>
         </form>
     </div>

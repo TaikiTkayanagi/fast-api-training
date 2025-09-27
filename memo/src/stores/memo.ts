@@ -13,10 +13,7 @@ export const useMemoStore = defineStore('memo', {
         async fetchMemos(id: number) {
             try {
                 const res = await fetch('http://localhost:8000/memos/' + id);
-                const json = await res.json() as {memo: Memo} | null;
-                if (json?.memo) {
-                    this.memo = json.memo;
-                }
+                this.memo = await res.json() as Memo;
             } catch (error) {
                 console.error('Error fetching memos:', error);
                 this.isFetingError = true;
